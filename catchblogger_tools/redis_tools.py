@@ -10,6 +10,8 @@ def create_redis_conn(redis_config):
 
 
 class RedisQueueIter:
+    """Iterator for redis queue.
+    """
     def __init__(self, redis_conn: Union[Dict, redis.Redis],
                  queue_key: Optional[str] = None, verbose: Union[bool, int] = 0):
         if isinstance(redis_conn, Dict):
@@ -40,4 +42,5 @@ class RedisQueueIter:
         return self
 
     def __del__(self):
-        self._pbar.close()
+        if self.verbose > 0:
+            self._pbar.close()
