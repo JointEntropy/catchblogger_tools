@@ -14,7 +14,7 @@ requires = open('requirements.txt').read().split('\n')
 
 setuptools.setup(
     name="catchblogger_tools",
-    version="0.0.3",  # engine version . number of api methods . number of fixes in version
+    version="0.1.3",  # engine version . number of api methods . number of fixes in version
     author="Grigory Ovchinnikov",
     author_email="ogowm@hotmail.com",
     description="Catchblogger utils",
